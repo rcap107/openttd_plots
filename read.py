@@ -14,11 +14,9 @@ nt = namedtuple(
         "price_factor",
     ],
 )
-nt
 
 
 def read_file(path):
-    print(path)
     with open(path, "r") as fp:
         # skip first two lines
         fp.readline()
@@ -31,6 +29,8 @@ def read_file(path):
                 # useful line
                 key = rest[0].split(',')[0]
                 if start.strip() in nt._fields:
+                    # remove all quotes from the string
+                    key = key.replace('"', "").replace("'", "").strip()
                     try:
                         key = float(key)
                     except ValueError:
