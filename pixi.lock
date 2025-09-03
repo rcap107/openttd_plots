@@ -1545,7 +1545,7 @@ packages:
 - pypi: ./
   name: openttd-plots
   version: 0.1.0
-  sha256: 9d1712f81a49378ba4d3b4b7ccbe794c52de2f55425059092219c201596d1fbc
+  sha256: d4299ddd84f41c07e4af7753b98a6427155dea215823f82b429ccaa9fe2008ab
   requires_dist:
   - ipython>=9.5.0
   - polars>=1.32.3
