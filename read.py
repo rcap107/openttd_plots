@@ -27,7 +27,7 @@ def read_file(path):
             start, *rest = line.split("=")
             if len(rest) > 0:
                 # useful line
-                key = rest[0].split(',')[0]
+                key = rest[0].split(",")[0]
                 if start.strip() in nt._fields:
                     # remove all quotes from the string
                     key = key.replace('"', "").replace("'", "").strip()
@@ -38,14 +38,13 @@ def read_file(path):
                     fields.append(key)
         return nt(*fields)
 
+
 cargos = {}
 for f in Path("data/").iterdir():
     cargo_name = f.stem
     if cargo_name.startswith("__"):
         continue
     fields = read_file(f)
-    cargos[cargo_name]=fields
+    cargos[cargo_name] = fields
 
 pl.DataFrame(list(cargos.values())).write_csv("cargo_stats.csv")
-
-

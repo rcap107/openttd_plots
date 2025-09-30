@@ -1,0 +1,25 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - README.md
+    - plot_cargo.py
+
+website:
+  title: "OpenTTD Plots"
+  navbar:
+    left:
+      - text: Home
+        href: README.html
+      - text: Cargo Plots
+        href: plot_cargo.html
+  page-footer:
+    left: "OpenTTD Plots &copy; 2025"
+    right: "Powered by Quarto"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true
+    code-tools: true

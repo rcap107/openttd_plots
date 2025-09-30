@@ -11,3 +11,6 @@ wheels/
 # pixi environments
 .pixi/*
 !.pixi/config.toml
+
+/.quarto/
+/_site/

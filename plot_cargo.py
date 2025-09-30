@@ -73,7 +73,7 @@ cargos = [
 
 
 # %%
-df = pl.read_csv("cargo_stats.csv").unique("id")
+df = pl.read_csv("data/cargo_stats.csv").unique("id")
 
 # %%
 plot_data = []
